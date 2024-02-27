@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/logs1/logs1",
+    "pages/logs2/logs2",
+    "pages/logs3/logs3"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationStyle": "custom"
+  },
+
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "组件1"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "组件2"
+      },
+      {
+        "pagePath": "pages/logs1/logs1",
+        "text": "组件3"
+      },
+      {
+        "pagePath": "pages/logs2/logs2",
+        "text": "组件4"
+      },
+      {
+        "pagePath": "pages/logs3/logs3",
+        "text": "组件5"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

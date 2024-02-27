@@ -1,0 +1,7 @@
+@import './font-awesome.wxss';
+@import "./font-awesome-stylesheet.wxss";
+view{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}

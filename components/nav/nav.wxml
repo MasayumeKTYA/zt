@@ -1,0 +1,8 @@
+<wxs src="./nav.wxs" module="nav" />
+<view class="nav" style="{{nav.setHeaderCss(statusBar,meun,bgColor)}}">
+	<view/>
+	<text class="title">{{ title }}</text>
+	<view/>
+</view>
+<view style="height:{{ statusBar+meun }}px;width:750rpx" />
+

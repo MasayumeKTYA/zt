@@ -1,0 +1,13 @@
+.nav {
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 750rpx;
+  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+}
+.title {
+  color: #78bd00;
+}
