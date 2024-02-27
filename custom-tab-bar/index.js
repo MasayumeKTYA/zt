@@ -38,15 +38,29 @@ Component({
     },
     ready() {
       setTimeout(() => {
-        // const ctx = wx.createCanvasContext("myCanvas");
-        // ctx.beginPath();
-        // ctx.arc(100, 25, 2, 0, 2 * Math.PI);
-        // ctx.setFillStyle("blue");
-        // ctx.fill();
-        // ctx.draw();
-
-        const node = this.selectComponent("#myCanvas");
-        console.log(node);
+        const ctx = wx.createCanvasContext("myCanvas");
+        ctx.beginPath();
+        ctx.arc(100, 25, 2, 0, 2 * Math.PI);
+        ctx.setFillStyle("blue");
+        ctx.fill();
+        ctx.draw();
+        console.log(ctx);
+        wx.canvasToTempFilePath({
+          x: 0,
+          y: 0,
+          width: 100,
+          height: 100,
+          destWidth: 100,
+          destHeight: 100,
+          canvasId: "myCanvas",
+          success: function (res) {
+            console.log(res.tempFilePath); // 生成的临时文件路径
+            // 可以将路径传递给其他 API，或通过 wx.previewImage 显示图片预览
+          },
+          fail: (res) => {
+            console.log(res);
+          },
+        });
       }, 2000);
     },
   },
