@@ -14,7 +14,9 @@ Page({
       list: arr,
     });
   },
-  onReady() {},
+  onReady() {
+   
+  },
   showB(e) {
     const { index } = e.currentTarget.dataset;
     console.log(e);

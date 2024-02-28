@@ -1,58 +1,43 @@
 <nav title="早上好！张先生" bgColor="rgb(39,42,59)" id="nav" />
-<swiper
- indicator-dots
- autoplay
- circular
- indicator-color="rgba(255,255,255,0.3)"
- indicator-active-color="rgb(120, 189, 0)"
->
-	<swiper-item>
-		<image src="/assest/swiper1.jpg" mode="scaleToFill" class="swiperPic" />
-	</swiper-item>
-	<swiper-item>
-		<image src="/assest/swiper2.jpg" mode="scaleToFill" class="swiperPic" />
-	</swiper-item>
-	<swiper-item>
-		<image src="/assest/swiper3.jpg" mode="scaleToFill" class="swiperPic" />
-	</swiper-item>
-	<swiper-item>
-		<image src="/assest/swiper4.jpg" mode="scaleToFill" class="swiperPic" />
-	</swiper-item>
+<swiper indicator-dots autoplay circular indicator-color="rgba(255,255,255,0.3)" indicator-active-color="rgb(120, 189, 0)">
+		<swiper-item>
+				<image src="/assest/swiper1.jpg" mode="scaleToFill" class="swiperPic" />
+		</swiper-item>
+		<swiper-item>
+				<image src="/assest/swiper2.jpg" mode="scaleToFill" class="swiperPic" />
+		</swiper-item>
+		<swiper-item>
+				<image src="/assest/swiper3.jpg" mode="scaleToFill" class="swiperPic" />
+		</swiper-item>
+		<swiper-item>
+				<image src="/assest/swiper4.jpg" mode="scaleToFill" class="swiperPic" />
+		</swiper-item>
 </swiper>
 <view class="header">
-	<view class="header_content" wx:for="{{5}}" wx:key="index">
-		<image src="/assest/header_pic.png" mode="scaleToFill" class="header_pic" />
-		<text class="header_font">功能{{index+1}}</text>
-	</view>
+		<view class="header_content" wx:for="{{5}}" wx:key="index">
+				<image src="/assest/header_pic.png" mode="scaleToFill" class="header_pic" />
+				<text class="header_font">功能{{index+1}}</text>
+		</view>
 </view>
 <view class="container">
-	<view
-	 class="box {{(index+1)%4==0? 'borderTop':'borderTopRight'}}"
-	 wx:for="{{list}}"
-	 wx:key="index"
-	 catch:tap="showB"
-	 data-index="{{(index+1)}}"
-	>
-		<block wx:if="{{index<10}}">
-			<image src="/assest/box_pic.png" mode="scaleToFill" class="box_pic" />
-			<text class="box_font">功能{{item}}</text>
-		</block>
-		<block wx:else>
-			<view>{{item}}</view>
-		</block>
-	</view>
+		<view class="box {{(index+1)%4==0? 'borderTop':'borderTopRight'}}" wx:for="{{list}}" wx:key="index" catch:tap="showB" data-index="{{(index+1)}}">
+				<block wx:if="{{index<10}}">
+						<image src="/assest/box_pic.png" mode="scaleToFill" class="box_pic" />
+						<text class="box_font">功能{{item}}</text>
+				</block>
+				<block wx:else>
+						<view>{{item}}</view>
+				</block>
+		</view>
 </view>
 <view class="overlay" catch:tap="hideB" wx:if="{{show}}">
-	<view class="popup">
-		<view class="popup_header">功能B</view>
-		<view class="popup_content">
-			<view wx:for="{{10}}" wx:key="index" class="popup_box">
-
-				<image src="/assest/box_pic.png" mode="scaleToFill" class="popup_pic" />
-				<text class="popup_font">功能{{index+1}}</text>
-
-			</view>
+		<view class="popup">
+				<view class="popup_header">功能B</view>
+				<view class="popup_content">
+						<view wx:for="{{10}}" wx:key="index" class="popup_box">
+								<image src="/assest/box_pic.png" mode="scaleToFill" class="popup_pic" />
+								<text class="popup_font">功能{{index+1}}</text>
+						</view>
+				</view>
 		</view>
-	</view>
 </view>
-

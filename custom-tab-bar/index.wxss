@@ -60,9 +60,9 @@
   left: -1.85714286em;
 }
 .fa-border {
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   border: solid 0.08em #eeeeee;
-  border-radius: 0.1em;
+  border-radius: .1em;
 }
 .fa-pull-left {
   float: left;
@@ -71,10 +71,10 @@
   float: right;
 }
 .fa.fa-pull-left {
-  margin-right: 0.3em;
+  margin-right: .3em;
 }
 .fa.fa-pull-right {
-  margin-left: 0.3em;
+  margin-left: .3em;
 }
 /* Deprecated as of 4.4.0 */
 .pull-right {
@@ -84,10 +84,10 @@
   float: left;
 }
 .fa.pull-left {
-  margin-right: 0.3em;
+  margin-right: .3em;
 }
 .fa.pull-right {
-  margin-left: 0.3em;
+  margin-left: .3em;
 }
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
@@ -2355,7 +2355,6 @@
   width: 750rpx;
   flex-direction: row;
   justify-content: space-around;
-  border-top: 1px solid #919193;
 }
 .tab .tab_box {
   align-items: center;
@@ -2373,16 +2372,9 @@
   transform: translateY(600%);
 }
 .re {
-  border-top: 1px solid #919193;
-  border-left: 1px solid #919193;
-  border-radius: 80%;
+  border-radius: 50%;
   padding: 10rpx 20rpx 0 20rpx;
   background: #fff;
   bottom: 50px;
   position: fixed;
-}
-.canvas {
-  position: fixed;
-  top: 50%;
-  z-index: 100;
 }

@@ -99,3 +99,7 @@ page {
   margin-top: 10rpx;
   text-align: center;
 }
+#myCanvas {
+  width: 80px;
+  height: 50px;
+}
