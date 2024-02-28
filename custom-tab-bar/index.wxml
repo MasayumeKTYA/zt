@@ -1,18 +1,24 @@
 <view class="tab" style=" bottom: {{ios}}px;">
-		<view wx:for="{{tab}}" wx:key="index" class="tab_box" catch:tap="text">
-				<block wx:if="{{index!=2}}">
-						<view class="{{item.icon}}" style="font-size:50rpx;color:{{active==index?'rgb(136,191,1)':'rgb(141,141,141)'}}" />
-						<view class="mt" style="color:{{active===index?'rgb(136,191,1)':'rgb(141,141,141)'}}">
-								{{item.title}}
-						</view>
-				</block>
-				<block wx:else>
-						<view class="re {{item.icon}}" style="font-size:100rpx;color:{{active==index?'rgb(136,191,1)':'rgb(141,141,141)'}}" />
-						<view class="three {{item.icon}}" style="font-size:50rpx;color:{{active==index?'rgb(136,191,1)':'rgb(141,141,141)'}}" />
-						<view class="mt" style="color:{{active===index?'rgb(136,191,1)':'rgb(141,141,141)'}}">
-								{{item.title}}
-						</view>
-				</block>
-		</view>
+	<view
+	 wx:for="{{tab}}"
+	 wx:key="index"
+	 class="tab_box"
+	 catch:tap="text"
+	>
+		<block wx:if="{{index!=2}}">
+			<view class="{{item.icon}}" style="font-size:50rpx;color:{{active==index?'rgb(136,191,1)':'rgb(141,141,141)'}}" />
+			<view class="mt" style="color:{{active===index?'rgb(136,191,1)':'rgb(141,141,141)'}}">
+				{{item.title}}
+			</view>
+		</block>
+		<block wx:else>
+			<view class="re {{item.icon}}" style="font-size:100rpx;color:{{active==index?'rgb(136,191,1)':'rgb(141,141,141)'}};bottom: {{ios+16}}px;" />
+			<view class="three {{item.icon}}" style="font-size:50rpx;color:{{active==index?'rgb(136,191,1)':'rgb(141,141,141)'}}" />
+			<view class="mt" style="color:{{active===index?'rgb(136,191,1)':'rgb(141,141,141)'}}">
+				{{item.title}}
+			</view>
+		</block>
+	</view>
 </view>
 <view style="height:{{ios}}px" class="ios" />
+
